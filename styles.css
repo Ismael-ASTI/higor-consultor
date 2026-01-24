@@ -1621,85 +1621,227 @@ section h2 {
 }
 
 @media (max-width: 480px) {
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
     :root {
-        --spacing-xl: 1.5rem;
-        --spacing-2xl: 2rem;
+        --spacing-xl: 1.2rem;
+        --spacing-2xl: 1.5rem;
         --spacing-3xl: 1.5rem;
     }
 
+    .container {
+        padding: 0 1rem;
+        max-width: 100%;
+    }
+
     .hero h1 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
+        line-height: 1.3;
     }
 
     .hero .subheading {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+        line-height: 1.5;
     }
 
     .hero-badge {
-        font-size: 0.8rem;
-        padding: 0.4rem 0.8rem;
+        font-size: 0.7rem;
+        padding: 0.35rem 0.7rem;
     }
 
     section {
-        padding: var(--spacing-2xl) 0;
+        padding: 1.5rem 0;
+        overflow: hidden;
     }
 
     section h2 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
     }
 
     .plans-grid,
     .cases-grid,
     .differentials-grid,
-    .faq-grid {
+    .faq-grid,
+    .achievements-grid {
         grid-template-columns: 1fr;
+        gap: 0.8rem;
     }
 
     .plan {
-        padding: var(--spacing-lg);
+        padding: 1rem;
+        border-radius: 0.75rem;
     }
 
     .plan-header h3 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .price {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     .stat strong {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .stat span {
+        font-size: 0.8rem;
     }
 
     .final-ctas {
         flex-direction: column;
+        gap: 0.75rem;
     }
 
     .final-ctas .btn {
         width: 100%;
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
         justify-content: center;
     }
 
     .step {
-        padding: var(--spacing-md);
+        padding: 1rem;
     }
 
     .step-number {
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
-        font-size: 1.5rem;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        font-size: 1.3rem;
+    }
+
+    .step h4 {
+        font-size: 1rem;
+    }
+
+    .step p {
+        font-size: 0.9rem;
     }
 
     .instagram-link {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .logo strong {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .logo .subtitle {
-        font-size: 0.65rem;
+        font-size: 0.6rem;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(0, 212, 255, 0.1);
+    }
+
+    .hero-image {
+        min-height: 300px;
+    }
+
+    .image-container {
+        max-width: 100%;
+        border-radius: 1rem;
+    }
+
+    .image-badge {
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .achievement-badge {
+        padding: 0.8rem;
+        min-height: auto;
+    }
+
+    .badge-icon {
+        font-size: 1.8rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .badge-text strong {
+        font-size: 1.4rem;
+    }
+
+    .badge-text span {
+        font-size: 0.75rem;
+    }
+
+    .testimonial-card {
+        padding: 1rem;
+        min-height: auto;
+    }
+
+    .testimonial-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .testimonial-author {
+        font-size: 0.85rem;
+    }
+
+    .differential {
+        padding: 0.8rem;
+    }
+
+    .differential h4 {
+        font-size: 1rem;
+    }
+
+    .differential p {
+        font-size: 0.9rem;
+    }
+
+    .faq-item {
+        padding: 0.8rem;
+    }
+
+    .faq-item h4 {
+        font-size: 1rem;
+    }
+
+    .faq-item p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra small devices (320px) */
+@media (max-width: 360px) {
+    :root {
+        --spacing-lg: 1.2rem;
+        --spacing-md: 0.8rem;
+    }
+
+    .container {
+        padding: 0 0.75rem;
+    }
+
+    .hero h1 {
+        font-size: 1.2rem;
+    }
+
+    section h2 {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.7rem 0.8rem;
+        font-size: 0.85rem;
     }
 }
