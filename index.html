@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Consultoria Premium de Musculação com Higor Loan - Transforme seu corpo com treino personalizado, nutrição e acompanhamento profissional">
+    <meta name="keywords" content="musculação, personal trainer, consultoria fitness, treino personalizado, nutrição, higor loan">
+    <meta name="theme-color" content="#1a1f3a">
+    <meta name="author" content="Higor Loan">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://higorloan.netlify.app/">
+    <meta property="og:title" content="Higor Loan - Consultoria Premium de Musculação">
+    <meta property="og:description" content="Transforme seu corpo com treino personalizado, nutrição e acompanhamento profissional. Mais de 1000 alunos transformados!">
+    <meta property="og:image" content="https://higorloan.netlify.app/assets/img/foto%20perfil%20profissional.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://higorloan.netlify.app/">
+    <meta property="twitter:title" content="Higor Loan - Consultoria Premium de Musculação">
+    <meta property="twitter:description" content="Transforme seu corpo com treino personalizado, nutrição e acompanhamento profissional. Mais de 1000 alunos transformados!">
+    <meta property="twitter:image" content="https://higorloan.netlify.app/assets/img/foto%20perfil%20profissional.png">
+    
+    <!-- Performance & SEO -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <title>Higor Loan - Consultoria Premium de Musculação e Fitness</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER / NAVEGAÇÃO -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <strong>💪 Higor Loan</strong>
+                <span class="subtitle">Consultoria Premium de Musculação</span>
+            </div>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav" id="mainNav">
+                <a href="#como-funciona">Como Funciona</a>
+                <a href="#planos">Planos</a>
+                <a href="#resultados">Resultados</a>
+                <a href="#sobre">Quem Sou</a>
+                <a href="#faq">FAQ</a>
+                <a href="https://www.instagram.com/higor_loan" target="_blank" class="nav-instagram">
+                    <i class="fab fa-instagram"></i> @higor_loan
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION COM IMAGEM -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-badge">🏆 Professor Musculação - FOCO Academia</span>
+                <h1>Consultoria Premium em Musculação Que Entrega Resultados</h1>
+                <p class="subheading">Seu plano personalizado + acompanhamento estratégico + transformação comprovada. Sem papo, sem enrolação. Só RESULTADO.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary" onclick="document.querySelector('#planos').scrollIntoView({behavior: 'smooth'})">Ver Planos</button>
+                    <a href="https://www.instagram.com/higor_loan" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-instagram"></i> Veja Resultados
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <strong>1000+</strong>
+                        <span>Alunos Transformados</span>
+                    </div>
+                    <div class="stat">
+                        <strong>98%</strong>
+                        <span>Taxa de Satisfação</span>
+                    </div>
+                    <div class="stat">
+                        <strong>5★</strong>
+                        <span>Avaliação Média</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="assets/img/foto perfil profissional.png" alt="Higor Loan - Professor Musculação" loading="lazy">
+                    <div class="image-badge">Professor Musculação</div>
+                    <div class="image-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BADGES DE CONQUISTAS -->
+    <section class="achievements">
+        <div class="container">
+            <div class="achievements-grid">
+                <div class="achievement-badge">
+                    <div class="badge-icon">🏆</div>
+                    <div class="badge-text">
+                        <strong class="counter" data-target="1000">0</strong>
+                        <span>Alunos Transformados</span>
+                    </div>
+                </div>
+                <div class="achievement-badge">
+                    <div class="badge-icon">⭐</div>
+                    <div class="badge-text">
+                        <strong class="counter" data-target="98">0</strong><strong>%</strong>
+                        <span>Satisfação</span>
+                    </div>
+                </div>
+                <div class="achievement-badge">
+                    <div class="badge-icon">💪</div>
+                    <div class="badge-text">
+                        <strong class="counter" data-target="5">0</strong>
+                        <span>Anos de Experiência</span>
+                    </div>
+                </div>
+                <div class="achievement-badge">
+                    <div class="badge-icon">📊</div>
+                    <div class="badge-text">
+                        <strong class="counter" data-target="500">0</strong><strong>+</strong>
+                        <span>Transformações Documentadas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARA QUEM É / QUEM NÃO É -->
+    <section class="audience">
+        <div class="container">
+            <h2>Para Quem É Esta Consultoria</h2>
+            <div class="audience-grid">
+                <div class="audience-column audience-is">
+                    <h3>✅ Você procura isso?</h3>
+                    <ul>
+                        <li>Plano de treino personalizado</li>
+                        <li>Orientação nutricional estratégica</li>
+                        <li>Suplementação inteligente</li>
+                        <li>Resultados REAIS e mensuráveis</li>
+                        <li>Acompanhamento e ajustes</li>
+                        <li>Comunidade e motivação</li>
+                    </ul>
+                </div>
+                <div class="audience-column audience-not">
+                    <h3>❌ Não é para você se...</h3>
+                    <ul>
+                        <li>Quer "milagre" em 7 dias</li>
+                        <li>Não está disposto a treinar sério</li>
+                        <li>Espera resultados sem disciplina</li>
+                        <li>Não segue orientações básicas</li>
+                        <li>Busca apenas motivação/papo</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="audience-note">Aqui você encontra um PARCEIRO que entrega resultado. Se você está pronto para TRANSFORMAR, vamos juntos!</p>
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section id="como-funciona" class="how-it-works">
+        <div class="container">
+            <h2>Como Você Transforma em 3 Passos</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>📋 Escolha Seu Plano</h4>
+                    <p>Diagnóstico, Transformação ou Acompanhamento. Selecione qual combina com seus objetivos.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>📝 Responda o Briefing</h4>
+                    <p>Dados de treino, nutrição, histórico. Sem reunião longa. Direto ao ponto.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>💪 Receba Seu Plano</h4>
+                    <p>Treino detalhado + nutrição + suplementação + acompanhamento + ajustes conforme resultado.</p>
+                </div>
+            </div>
+            <p class="no-noise">✅ <strong>Sem enrolação. Sem conversa desnecessária. SÓ RESULTADO.</strong></p>
+        </div>
+    </section>
+
+    <!-- PLANOS -->
+    <section id="planos" class="plans">
+        <div class="container">
+            <h2>Planos Adaptados ao Seu Objetivo</h2>
+            
+            <div class="plans-grid">
+                <!-- Plano DIAGNÓSTICO -->
+                <div class="plan plan-diagnostico">
+                    <div class="plan-header">
+                        <h3>🎯 DIAGNÓSTICO</h3>
+                        <p class="plan-subtitle">Entender o Ponto de Partida</p>
+                    </div>
+                    <p class="plan-description">Avaliação completa do seu atual cenário: treino, nutrição, suplementação e potencial genético.</p>
+                    <ul class="plan-features">
+                        <li>✔️ Análise de composição corporal</li>
+                        <li>✔️ Avaliação do treino atual</li>
+                        <li>✔️ Análise nutricional</li>
+                        <li>✔️ Diagnóstico detalhado em vídeo</li>
+                    </ul>
+                    <div class="plan-meta">
+                        <span class="plan-time">⏱️ Entrega: 2-3 dias</span>
+                    </div>
+                    <div class="plan-price">
+                        <span class="price-label">A partir de</span>
+                        <span class="price">R$ 297</span>
+                    </div>
+                    <button class="btn btn-plan" onclick="selectPlan('DIAGNÓSTICO', 297)">Escolher Plano</button>
+                    <p class="plan-who">
+                        <strong>Para:</strong> Quem quer entender seus gargalos
+                    </p>
+                </div>
+
+                <!-- Plano TRANSFORMAÇÃO -->
+                <div class="plan plan-transformacao plan-featured">
+                    <div class="plan-badge">🔥 MAIS PROCURADO</div>
+                    <div class="plan-header">
+                        <h3>💪 TRANSFORMAÇÃO</h3>
+                        <p class="plan-subtitle">Plano Completo + Acompanhamento</p>
+                    </div>
+                    <p class="plan-description">Treino estruturado, nutrição personalizada, suplementação inteligente e acompanhamento de 30 dias.</p>
+                    <ul class="plan-features">
+                        <li>✔️ Treino personalizado (4-6x/semana)</li>
+                        <li>✔️ Plano nutricional detalhado</li>
+                        <li>✔️ Rotina suplementar</li>
+                        <li>✔️ Acompanhamento 30 dias</li>
+                        <li>✔️ 2 ajustes conforme resultado</li>
+                        <li>✔️ Acesso a comunidade privada</li>
+                    </ul>
+                    <div class="plan-meta">
+                        <span class="plan-time">⏱️ Início imediato</span>
+                    </div>
+                    <div class="plan-price">
+                        <span class="price-label">A partir de</span>
+                        <span class="price">R$ 597</span>
+                    </div>
+                    <button class="btn btn-plan btn-plan-featured" onclick="selectPlan('TRANSFORMAÇÃO', 597)">Escolher Plano</button>
+                    <p class="plan-who">
+                        <strong>Para:</strong> Quem quer resultado REAL e orientado
+                    </p>
+                </div>
+
+                <!-- Plano ACOMPANHAMENTO MÁXIMO -->
+                <div class="plan plan-maximo">
+                    <div class="plan-header">
+                        <h3>👑 ELITE</h3>
+                        <p class="plan-subtitle">Máximo Acompanhamento</p>
+                    </div>
+                    <p class="plan-description">Tudo do TRANSFORMAÇÃO + acompanhamento de 90 dias + ajustes ilimitados + reuniões estratégicas.</p>
+                    <ul class="plan-features">
+                        <li>✔️ Tudo do TRANSFORMAÇÃO</li>
+                        <li>✔️ Acompanhamento 90 dias</li>
+                        <li>✔️ Ajustes ilimitados</li>
+                        <li>✔️ 2 reuniões one-on-one</li>
+                        <li>✔️ Prioridade máxima no suporte</li>
+                        <li>✔️ Acesso VIP comunidade privada</li>
+                    </ul>
+                    <div class="plan-meta">
+                        <span class="plan-time">⏱️ Duração: 90 dias</span>
+                    </div>
+                    <div class="plan-price">
+                        <span class="price-label">A partir de</span>
+                        <span class="price">R$ 1.497</span>
+                    </div>
+                    <button class="btn btn-plan" onclick="selectPlan('ELITE', 1497)">Escolher Plano</button>
+                    <p class="plan-who">
+                        <strong>Para:</strong> Quem quer transformação GARANTIDA
+                    </p>
+                </div>
+            </div>
+
+            <p class="plans-promise">💡 <strong>Cansado de enrolação? Chegou a hora de TRANSFORMAR.</strong></p>
+        </div>
+    </section>
+
+    <!-- RESULTADOS REAIS DO INSTAGRAM -->
+    <section id="resultados" class="case-studies">
+        <div class="container">
+            <h2>Transformações Reais - Veja no Instagram</h2>
+            <p class="results-subtitle">Centenas de histórias de sucesso. Acompanhe em tempo real:</p>
+            
+            <div class="instagram-call">
+                <a href="https://www.instagram.com/higor_loan" target="_blank" class="instagram-link">
+                    <i class="fab fa-instagram"></i>
+                    <span>@higor_loan</span>
+                </a>
+                <p>Veja antes/depois, dicas, rotinas e mais</p>
+            </div>
+
+            <div class="cases-grid">
+                <div class="case">
+                    <p class="case-situation"><strong>João - Iniciante</strong></p>
+                    <p class="case-action">Treino 3x/semana + Nutrição definida</p>
+                    <p class="case-result">+8kg de músculo em 8 semanas</p>
+                </div>
+                <div class="case">
+                    <p class="case-situation"><strong>Maria - Definição</strong></p>
+                    <p class="case-action">Treino HIIT + Nutrição low carb</p>
+                    <p class="case-result">-12% de gordura corporal em 12 semanas</p>
+                </div>
+                <div class="case">
+                    <p class="case-situation"><strong>Pedro - Experiente</strong></p>
+                    <p class="case-action">Treino avançado + Suplementação otimizada</p>
+                    <p class="case-result">+15kg de músculo em 16 semanas</p>
+                </div>
+            </div>
+            <p class="case-note">Estas transformações estão documentadas no Instagram com antes/depois comprovados.</p>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="assets/img/foto perfil profissional.png" alt="Higor Loan - Professor Musculação">
+                    <div class="about-image-overlay"></div>
+                </div>
+                <div class="about-text">
+                    <h2>Sobre Mim</h2>
+                    
+                    <h3>Quem Sou</h3>
+                    <p>Higor Loan, Professor de Musculação na FOCO Academia. Especialista em periodização, nutrição e transformação corporal com base em ciência, não em milagre.</p>
+                    
+                    <h3>Por Que Eu Faço Isto</h3>
+                    <p>Porque cansei de ver pessoas desperdiçando tempo em treinos ineficientes e nutrição errada. Meu objetivo é simples: RESULTADO COMPROVADO em menos tempo.</p>
+                    
+                    <h3>Como Trabalho</h3>
+                    <p>Sem BS. Sem papo de "milagre". Sem suplementos desnecessários. Só treino inteligente + nutrição personalizada + acompanhamento que funciona.</p>
+                    
+                    <h3>Credenciais</h3>
+                    <ul class="credentials">
+                        <li>✅ Professor de Musculação certificado</li>
+                        <li>✅ 1000+ alunos transformados</li>
+                        <li>✅ 98% de taxa de satisfação</li>
+                        <li>✅ Avaliações 5★</li>
+                        <li>✅ Acompanhamento na FOCO Academia</li>
+                    </ul>
+                    
+                    <div class="about-cta">
+                        <p><strong>Pronto para sua transformação?</strong></p>
+                        <button class="btn btn-primary" onclick="document.querySelector('#planos').scrollIntoView({behavior: 'smooth'})">Ver Planos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="differentials">
+        <div class="container">
+            <h2>Por Que Você Deve Escolher Minha Consultoria</h2>
+            <div class="differentials-grid">
+                <div class="differential">
+                    <h4>📊 Acompanhamento Real</h4>
+                    <p>Você não vai ser mais um número. Acompanhamento estratégico, ajustes conforme resultado.</p>
+                </div>
+                <div class="differential">
+                    <h4>🎯 Personalização 100%</h4>
+                    <p>Seu treino é feito para VOCÊ. Seu corpo. Seu objetivo. Seu estilo de vida.</p>
+                </div>
+                <div class="differential">
+                    <h4>📱 Acesso Instagram</h4>
+                    <p>Acompanhe minhas dicas, rotinas e transformações de alunos em tempo real.</p>
+                </div>
+                <div class="differential">
+                    <h4>💪 Comunidade Exclusiva</h4>
+                    <p>Acesso a grupo privado com dicas, suporte e motivação de quem está na luta.</p>
+                </div>
+                <div class="differential">
+                    <h4>✅ Resultado Garantido</h4>
+                    <p>Se seguir o plano e não ver resultado, fazemos ajustes até funcionar.</p>
+                </div>
+                <div class="differential">
+                    <h4>🚀 Entrega Rápida</h4>
+                    <p>Seu plano pronto em poucos dias. Sem enrolação. Início imediato.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Perguntas Frequentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>❓ Quanto tempo para ver resultado?</h4>
+                    <p>De 3-4 semanas já dá pra sentir. Em 8 semanas resultado visual comprovado. Depende de quanto você se dedica.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>❓ Preciso ir à academia?</h4>
+                    <p>Sim, o treino presencial é superior. Mas posso adaptar rotinas caseiras se necessário.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>❓ E se não conseguir seguir o plano?</h4>
+                    <p>Ajustamos. Seu plano é personalizado. Se não funciona, mexemos na intensidade, na frequência, na nutrição.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>❓ Preciso de suplemento caro?</h4>
+                    <p>Não. Suplemento é complemento. Alimento vem em primeiro lugar. Recomendo o ESSENCIAL, nada mais.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>❓ Funciona para mulheres também?</h4>
+                    <p>100%. Tenho centenas de alunas transformadas. A diferença é na progressão, não no método.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>❓ Acompanhamento de quanto em quanto tempo?</h4>
+                    <p>Depende do plano. DIAGNÓSTICO: pontual. TRANSFORMAÇÃO: 30 dias. ELITE: 90 dias com ajustes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>O Que Meus Alunos Dizem</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Melhor investimento que fiz! Em 3 meses ganhei 8kg de massa magra. O Higor é muito profissional e sempre ajusta o treino conforme minha evolução."</p>
+                    <div class="testimonial-author">
+                        <strong>João Silva</strong>
+                        <span>Empresário, 34 anos</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Perdi 15kg e ganhei muita definição. O acompanhamento nutricional fez TODA a diferença. Recomendo de olhos fechados!"</p>
+                    <div class="testimonial-author">
+                        <strong>Maria Santos</strong>
+                        <span>Advogada, 28 anos</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Treino há anos mas nunca tive resultado como agora. O Higor entende de periodização e sabe exatamente quando empurrar e quando recuar."</p>
+                    <div class="testimonial-author">
+                        <strong>Pedro Costa</strong>
+                        <span>Engenheiro, 41 anos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final">
+        <div class="container">
+            <h2>Sua Transformação Começa Hoje</h2>
+            <p>Não vamos ficar conversando. Vamos TRANSFORMAR.</p>
+            <div class="final-ctas">
+                <button class="btn btn-primary btn-large" onclick="document.querySelector('#planos').scrollIntoView({behavior: 'smooth'})">Ver Planos</button>
+                <a href="https://www.instagram.com/higor_loan" target="_blank" class="btn btn-secondary btn-large">
+                    <i class="fab fa-instagram"></i> Ver Resultados
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>💪 Higor Loan</h4>
+                    <p>Consultoria Premium de Musculação</p>
+                    <p>Professor na FOCO Academia</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Rápidos Links</h4>
+                    <ul>
+                        <li><a href="#como-funciona">Como Funciona</a></li>
+                        <li><a href="#planos">Planos</a></li>
+                        <li><a href="#resultados">Resultados</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Social</h4>
+                    <ul>
+                        <li><a href="https://www.instagram.com/higor_loan" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Higor Loan - Consultoria Premium. Todos os direitos reservados.</p>
+                <p class="footer-promise"><strong>Transformação. Resultado. Confiança.</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL DE CHECKOUT -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeCheckout()">✕</button>
+            <h3>Checkout</h3>
+            <div id="checkoutInfo" class="checkout-info">
+                <p><strong>Plano:</strong> <span id="planName"></span></p>
+                <p><strong>Valor:</strong> R$ <span id="planPrice"></span></p>
+            </div>
+            <div class="checkout-form">
+                <h4>Dados do Pagamento</h4>
+                <input type="text" placeholder="Nome completo" id="fullName" required>
+                <input type="email" placeholder="Email" id="email" required>
+                <input type="tel" placeholder="Telefone/WhatsApp" id="phone" required>
+                <input type="text" placeholder="Empresa (opcional)" id="company">
+                
+                <div class="payment-method">
+                    <label>
+                        <input type="radio" name="payment" value="pix" checked> PIX
+                    </label>
+                    <label>
+                        <input type="radio" name="payment" value="card"> Cartão de Crédito
+                    </label>
+                </div>
+
+                <button class="btn btn-primary btn-full" onclick="processPayment()">Continuar para Pagamento</button>
+                <p class="payment-note">✔️ Pagamento seguro. Após confirmação, você vai responder o briefing estratégico.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
