@@ -312,6 +312,8 @@ img {
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-3xl);
     align-items: center;
+    word-wrap: break-word;
+    overflow: hidden;
 }
 
 .hero-text h1 {
@@ -1515,6 +1517,8 @@ section h2 {
     .hero-content {
         grid-template-columns: 1fr;
         gap: var(--spacing-2xl);
+        word-wrap: break-word;
+        overflow: hidden;
     }
 
     .hero-text {
@@ -1833,15 +1837,15 @@ section h2 {
     }
 
     .hero h1 {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
     }
 
     section h2 {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .btn {
-        padding: 0.7rem 0.8rem;
-        font-size: 0.85rem;
+        padding: 0.65rem 0.75rem;
+        font-size: 0.8rem;
     }
 }
