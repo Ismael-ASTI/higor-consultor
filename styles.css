@@ -782,6 +782,14 @@ section h2 {
     background: linear-gradient(135deg, white 0%, var(--gray-50) 100%);
 }
 
+.plans-note {
+    text-align: center;
+    color: var(--gray-600);
+    font-size: 1.05rem;
+    margin: 0 auto var(--spacing-xl);
+    max-width: 720px;
+}
+
 .plans-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -1707,6 +1715,11 @@ section h2 {
 
     section h2 {
         font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .plans-note {
+        font-size: 0.95rem;
         margin-bottom: 1.5rem;
     }
 
