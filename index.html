@@ -66,7 +66,7 @@
             <div class="hero-text">
                 <span class="hero-badge">🏆 Professor Musculação - FOCO Academia</span>
                 <h1>Consultoria Premium em Musculação Que Entrega Resultados</h1>
-                <p class="subheading">Seu plano personalizado + acompanhamento estratégico + transformação comprovada. Sem papo, sem enrolação. Só RESULTADO.</p>
+                <p class="subheading">Depois de anos aprendendo com os maiores nomes do mundo fitness, transformei todo esse conhecimento em uma consultoria completa para você. Treino individual, personalizado e com periodização comprovada. Com fotos ao lado de celebridades do fitness como comprovação.</p>
                 <div class="cta-buttons">
                     <button class="btn btn-primary" onclick="document.querySelector('#planos').scrollIntoView({behavior: 'smooth'})">Ver Planos</button>
                     <a href="https://www.instagram.com/higor_loan" target="_blank" class="btn btn-secondary">
@@ -165,6 +165,16 @@
         </div>
     </section>
 
+    <!-- MENSAGEM DE DESTAQUE -->
+    <section class="highlight-message">
+        <div class="container">
+            <div class="message-box">
+                <h2>⚠️ Você ainda não tem resultado por que usa fichinha de academia e treina errado</h2>
+                <p>A maioria das pessoas desperdiça tempo com programas genéricos que não funcionam. Aqui você recebe um treino 100% individualizado com periodização comprovada e acompanhamento real.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- COMO FUNCIONA -->
     <section id="como-funciona" class="how-it-works">
         <div class="container">
@@ -196,86 +206,114 @@
             <h2>Planos Adaptados ao Seu Objetivo</h2>
             
             <div class="plans-grid">
-                <!-- Plano DIAGNÓSTICO -->
-                <div class="plan plan-diagnostico">
+                <!-- Plano BRONZE -->
+                <div class="plan plan-bronze">
                     <div class="plan-header">
-                        <h3>🎯 DIAGNÓSTICO</h3>
-                        <p class="plan-subtitle">Entender o Ponto de Partida</p>
+                        <h3>🥉 BRONZE</h3>
+                        <p class="plan-subtitle">Treino Personalizado Base</p>
                     </div>
-                    <p class="plan-description">Avaliação completa do seu atual cenário: treino, nutrição, suplementação e potencial genético.</p>
+                    <p class="plan-description">Treino individual 100% personalizado com periodização de treino. Sem contrato de fidelidade.</p>
                     <ul class="plan-features">
-                        <li>✔️ Análise de composição corporal</li>
-                        <li>✔️ Avaliação do treino atual</li>
-                        <li>✔️ Análise nutricional</li>
-                        <li>✔️ Diagnóstico detalhado em vídeo</li>
+                        <li>✔️ Treino 100% individual</li>
+                        <li>✔️ Periodização de treino</li>
+                        <li>✔️ Sem fidelidade</li>
+                        <li>✔️ Sem WhatsApp particular</li>
+                        <li>✔️ Sem avaliação postural</li>
                     </ul>
                     <div class="plan-meta">
-                        <span class="plan-time">⏱️ Entrega: 2-3 dias</span>
+                        <span class="plan-time">⏱️ Sem contrato</span>
                     </div>
                     <div class="plan-price">
-                        <span class="price-label">A partir de</span>
-                        <span class="price">R$ 297</span>
+                        <span class="price-label">Único pagamento</span>
+                        <span class="price">R$ 250</span>
                     </div>
-                    <button class="btn btn-plan" onclick="selectPlan('DIAGNÓSTICO', 297)">Escolher Plano</button>
+                    <button class="btn btn-plan" onclick="redirectWhatsApp('BRONZE', 250)">Contratar via WhatsApp</button>
                     <p class="plan-who">
-                        <strong>Para:</strong> Quem quer entender seus gargalos
+                        <strong>Para:</strong> Quem quer começar a treinar certo
                     </p>
                 </div>
 
-                <!-- Plano TRANSFORMAÇÃO -->
-                <div class="plan plan-transformacao plan-featured">
-                    <div class="plan-badge">🔥 MAIS PROCURADO</div>
+                <!-- Plano PRATA -->
+                <div class="plan plan-prata">
                     <div class="plan-header">
-                        <h3>💪 TRANSFORMAÇÃO</h3>
-                        <p class="plan-subtitle">Plano Completo + Acompanhamento</p>
+                        <h3>🥈 PRATA</h3>
+                        <p class="plan-subtitle">Treino + Suporte WhatsApp</p>
                     </div>
-                    <p class="plan-description">Treino estruturado, nutrição personalizada, suplementação inteligente e acompanhamento de 30 dias.</p>
+                    <p class="plan-description">Treino individual + WhatsApp particular para qualquer dúvida. Fidelidade de 3 meses.</p>
                     <ul class="plan-features">
-                        <li>✔️ Treino personalizado (4-6x/semana)</li>
-                        <li>✔️ Plano nutricional detalhado</li>
-                        <li>✔️ Rotina suplementar</li>
-                        <li>✔️ Acompanhamento 30 dias</li>
-                        <li>✔️ 2 ajustes conforme resultado</li>
-                        <li>✔️ Acesso a comunidade privada</li>
+                        <li>✔️ Treino 100% individual</li>
+                        <li>✔️ Periodização de treino</li>
+                        <li>✔️ WhatsApp particular incluído</li>
+                        <li>✔️ Resposta rápida dúvidas</li>
+                        <li>✔️ Fidelidade: 3 meses</li>
                     </ul>
                     <div class="plan-meta">
-                        <span class="plan-time">⏱️ Início imediato</span>
+                        <span class="plan-time">⏱️ 3 meses fidelidade</span>
                     </div>
                     <div class="plan-price">
-                        <span class="price-label">A partir de</span>
-                        <span class="price">R$ 597</span>
+                        <span class="price-label">Mensal</span>
+                        <span class="price">R$ 170</span>
                     </div>
-                    <button class="btn btn-plan btn-plan-featured" onclick="selectPlan('TRANSFORMAÇÃO', 597)">Escolher Plano</button>
+                    <button class="btn btn-plan" onclick="redirectWhatsApp('PRATA', 170)">Contratar via WhatsApp</button>
                     <p class="plan-who">
-                        <strong>Para:</strong> Quem quer resultado REAL e orientado
+                        <strong>Para:</strong> Quem quer suporte contínuo
                     </p>
                 </div>
 
-                <!-- Plano ACOMPANHAMENTO MÁXIMO -->
-                <div class="plan plan-maximo">
+                <!-- Plano OURO -->
+                <div class="plan plan-ouro plan-featured">
+                    <div class="plan-badge">🔥 MELHOR CUSTO-BENEFÍCIO</div>
                     <div class="plan-header">
-                        <h3>👑 ELITE</h3>
-                        <p class="plan-subtitle">Máximo Acompanhamento</p>
+                        <h3>🏆 OURO</h3>
+                        <p class="plan-subtitle">Treino + Suporte + Trocas</p>
                     </div>
-                    <p class="plan-description">Tudo do TRANSFORMAÇÃO + acompanhamento de 90 dias + ajustes ilimitados + reuniões estratégicas.</p>
+                    <p class="plan-description">Treino individual + WhatsApp 24/7 + 2 trocas de treino + reajuste de carga. Fidelidade de 6 meses.</p>
                     <ul class="plan-features">
-                        <li>✔️ Tudo do TRANSFORMAÇÃO</li>
-                        <li>✔️ Acompanhamento 90 dias</li>
-                        <li>✔️ Ajustes ilimitados</li>
-                        <li>✔️ 2 reuniões one-on-one</li>
-                        <li>✔️ Prioridade máxima no suporte</li>
-                        <li>✔️ Acesso VIP comunidade privada</li>
+                        <li>✔️ Treino 100% individual</li>
+                        <li>✔️ WhatsApp particular 24/7</li>
+                        <li>✔️ 2 trocas de treino</li>
+                        <li>✔️ Reajuste de carga</li>
+                        <li>✔️ Periodização completa</li>
+                        <li>✔️ Fidelidade: 6 meses</li>
                     </ul>
                     <div class="plan-meta">
-                        <span class="plan-time">⏱️ Duração: 90 dias</span>
+                        <span class="plan-time">⏱️ 6 meses fidelidade</span>
                     </div>
                     <div class="plan-price">
-                        <span class="price-label">A partir de</span>
-                        <span class="price">R$ 1.497</span>
+                        <span class="price-label">Mensal</span>
+                        <span class="price">R$ 160</span>
                     </div>
-                    <button class="btn btn-plan" onclick="selectPlan('ELITE', 1497)">Escolher Plano</button>
+                    <button class="btn btn-plan btn-plan-featured" onclick="redirectWhatsApp('OURO', 160)">Contratar via WhatsApp</button>
                     <p class="plan-who">
-                        <strong>Para:</strong> Quem quer transformação GARANTIDA
+                        <strong>Para:</strong> Quem quer resultado garantido
+                    </p>
+                </div>
+
+                <!-- Plano DIAMANTE -->
+                <div class="plan plan-diamante">
+                    <div class="plan-header">
+                        <h3>💎 DIAMANTE</h3>
+                        <p class="plan-subtitle">Acompanhamento Completo + Avaliação</p>
+                    </div>
+                    <p class="plan-description">Treino individual + WhatsApp 24/7 + 4 trocas treino + avaliação postural + máximo suporte. Fidelidade de 12 meses.</p>
+                    <ul class="plan-features">
+                        <li>✔️ Treino 100% individual</li>
+                        <li>✔️ WhatsApp particular 24/7</li>
+                        <li>✔️ 4 trocas de treino</li>
+                        <li>✔️ Avaliação postural incluída</li>
+                        <li>✔️ Periodização avançada</li>
+                        <li>✔️ Fidelidade: 12 meses</li>
+                    </ul>
+                    <div class="plan-meta">
+                        <span class="plan-time">⏱️ 12 meses fidelidade</span>
+                    </div>
+                    <div class="plan-price">
+                        <span class="price-label">Mensal</span>
+                        <span class="price">R$ 150</span>
+                    </div>
+                    <button class="btn btn-plan" onclick="redirectWhatsApp('DIAMANTE', 150)">Contratar via WhatsApp</button>
+                    <p class="plan-who">
+                        <strong>Para:</strong> Quem quer parceria de longo prazo
                     </p>
                 </div>
             </div>

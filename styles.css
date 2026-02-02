@@ -9,16 +9,17 @@
 }
 
 :root {
-    --primary-dark: #0a0e27;
-    --primary: #1a1f3a;
-    --accent: #00d4ff;
-    --accent-secondary: #ff6b35;
-    --accent-tertiary: #7c3aed;
+    --primary-dark: #0f1419;
+    --primary: #16202b;
+    --accent: #00bcd4;
+    --accent-gold: #c9a961;
+    --accent-secondary: #00bcd4;
+    --accent-tertiary: #5a4a8a;
     --success: #10b981;
     --danger: #ef4444;
-    --gray-50: #f9fafb;
-    --gray-100: #f3f4f6;
-    --gray-200: #e5e7eb;
+    --gray-50: #f8f9fa;
+    --gray-100: #f0f2f5;
+    --gray-200: #e8ebed;
     --gray-300: #d1d5db;
     --gray-500: #6b7280;
     --gray-600: #4b5563;
@@ -489,24 +490,30 @@ img {
 
 .btn-plan {
     background: var(--accent);
-    color: var(--primary-dark);
+    color: white;
     width: 100%;
-    margin-top: var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-md);
+    margin-top: auto;
     border-radius: var(--radius-lg);
+    transition: all 0.3s ease;
+    font-weight: 600;
 }
 
 .btn-plan:hover {
     background: #0099cc;
     transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 188, 212, 0.3);
 }
 
 .btn-plan-featured {
-    background: linear-gradient(135deg, var(--accent-tertiary) 0%, var(--accent) 100%);
+    background: linear-gradient(135deg, var(--accent-gold) 0%, #b8941f 100%);
     color: white;
+    font-weight: 700;
 }
 
 .btn-plan-featured:hover {
-    background: linear-gradient(135deg, #6d28d9 0%, #0099cc 100%);
+    background: linear-gradient(135deg, #dbc96b 0%, #c9a961 100%);
+    box-shadow: 0 10px 25px rgba(201, 169, 97, 0.4);
 }
 
 .btn-large {
@@ -679,6 +686,37 @@ section h2 {
     background: white;
 }
 
+/* ============================================
+   HIGHLIGHT MESSAGE
+   ============================================ */
+
+.highlight-message {
+    background: linear-gradient(135deg, rgba(201, 169, 97, 0.08) 0%, rgba(90, 74, 138, 0.08) 100%);
+    padding: var(--spacing-2xl) 0;
+    border-top: 2px solid var(--accent-gold);
+    border-bottom: 2px solid var(--accent-gold);
+}
+
+.message-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-2xl);
+    border-left: 5px solid var(--accent-gold);
+    box-shadow: 0 10px 30px rgba(201, 169, 97, 0.12);
+}
+
+.message-box h2 {
+    color: var(--accent-gold);
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.message-box p {
+    color: var(--gray-700);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
 .steps-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -749,6 +787,8 @@ section h2 {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: var(--spacing-xl);
     margin-bottom: var(--spacing-xl);
+    justify-items: stretch;
+    align-items: stretch;
 }
 
 .plan {
@@ -756,12 +796,14 @@ section h2 {
     border-radius: var(--radius-2xl);
     padding: var(--spacing-xl);
     box-shadow: var(--shadow-md);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.3s ease;
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     border: 1px solid var(--gray-200);
     overflow: hidden;
+    min-height: 100%;
 }
 
 .plan::before {
@@ -788,17 +830,19 @@ section h2 {
 }
 
 .plan-featured {
-    border: 2px solid var(--accent);
-    transform: scale(1.05);
-    background: linear-gradient(135deg, rgba(0, 212, 255, 0.03) 0%, white 100%);
+    border: 2px solid var(--accent-gold);
+    transform: scale(1.02);
+    background: linear-gradient(135deg, rgba(201, 169, 97, 0.03) 0%, white 100%);
 }
 
 .plan-featured::before {
     transform: scaleX(1);
+    background: linear-gradient(90deg, var(--accent-gold) 0%, var(--accent) 100%);
 }
 
 .plan-featured:hover {
-    transform: scale(1.05) translateY(-15px);
+    transform: scale(1.02) translateY(-10px);
+    border-color: var(--accent-gold);
 }
 
 .plan-badge {
@@ -806,7 +850,7 @@ section h2 {
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(135deg, var(--accent-secondary) 0%, var(--accent) 100%);
+    background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-tertiary) 100%);
     color: white;
     padding: 0.5rem 1rem;
     border-radius: var(--radius-lg);
@@ -1631,39 +1675,39 @@ section h2 {
     }
 
     :root {
-        --spacing-xl: 1.2rem;
-        --spacing-2xl: 1.5rem;
-        --spacing-3xl: 1.5rem;
+        --spacing-xl: 1.5rem;
+        --spacing-2xl: 2rem;
+        --spacing-3xl: 2rem;
     }
 
     .container {
-        padding: 0 1rem;
+        padding: 0 1.5rem;
         max-width: 100%;
     }
 
     .hero h1 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         line-height: 1.3;
     }
 
     .hero .subheading {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         line-height: 1.5;
     }
 
     .hero-badge {
-        font-size: 0.7rem;
-        padding: 0.35rem 0.7rem;
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
     }
 
     section {
-        padding: 1.5rem 0;
+        padding: 2rem 0;
         overflow: hidden;
     }
 
     section h2 {
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
     }
 
     .plans-grid,
@@ -1672,67 +1716,67 @@ section h2 {
     .faq-grid,
     .achievements-grid {
         grid-template-columns: 1fr;
-        gap: 0.8rem;
+        gap: 1.2rem;
     }
 
     .plan {
-        padding: 1rem;
-        border-radius: 0.75rem;
+        padding: 1.5rem;
+        border-radius: 1rem;
     }
 
     .plan-header h3 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .price {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     .stat strong {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .stat span {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
     }
 
     .final-ctas {
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 1rem;
     }
 
     .final-ctas .btn {
         width: 100%;
-        padding: 0.8rem 1rem;
-        font-size: 0.9rem;
+        padding: 1rem 1.5rem;
+        font-size: 0.95rem;
         justify-content: center;
     }
 
     .step {
-        padding: 1rem;
+        padding: 1.5rem;
     }
 
     .step-number {
-        width: 45px;
-        height: 45px;
-        line-height: 45px;
-        font-size: 1.3rem;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.4rem;
     }
 
     .step h4 {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .step p {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
 
     .instagram-link {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .logo strong {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .logo .subtitle {
@@ -1828,24 +1872,24 @@ section h2 {
 /* Extra small devices (320px) */
 @media (max-width: 360px) {
     :root {
-        --spacing-lg: 1.2rem;
-        --spacing-md: 0.8rem;
+        --spacing-lg: 1.5rem;
+        --spacing-md: 1rem;
     }
 
     .container {
-        padding: 0 0.75rem;
+        padding: 0 1rem;
     }
 
     .hero h1 {
-        font-size: 1.15rem;
+        font-size: 1.3rem;
     }
 
     section h2 {
-        font-size: 0.95rem;
+        font-size: 1.2rem;
     }
 
     .btn {
-        padding: 0.65rem 0.75rem;
-        font-size: 0.8rem;
+        padding: 0.8rem 1rem;
+        font-size: 0.85rem;
     }
 }

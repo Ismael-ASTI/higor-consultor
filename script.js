@@ -107,7 +107,26 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ============================================
-// PLAN SELECTION & CHECKOUT
+// REDIRECT TO WHATSAPP
+// ============================================
+
+function redirectWhatsApp(planName, price) {
+    // Número do WhatsApp (com código de país: 55 = Brasil)
+    // SUBSTITUA AQUI COM SEU NÚMERO: Ex: 5511987654321 (55 + DDD + número)
+    const whatsappNumber = '5511999999999';
+    
+    // Mensagem padrão
+    const message = `Olá! Tenho interesse no plano *${planName}* (R$ ${price}). Gostaria de mais informações.`;
+    
+    // Criar URL do WhatsApp
+    const whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
+    
+    // Redirecionar
+    window.open(whatsappURL, '_blank');
+}
+
+// ============================================
+// PLAN SELECTION & CHECKOUT (DEPRECATED - keeping for backwards compatibility)
 // ============================================
 
 let selectedPlan = {
@@ -116,21 +135,8 @@ let selectedPlan = {
 };
 
 function selectPlan(planName, price) {
-    selectedPlan.name = planName;
-    selectedPlan.price = price;
-    
-    document.getElementById('planName').textContent = planName;
-    document.getElementById('planPrice').textContent = price;
-    
-    document.getElementById('checkoutModal').classList.add('show');
-    document.body.style.overflow = 'hidden';
-    
-    document.querySelector('.modal-content').scrollTop = 0;
-}
-
-function closeCheckout() {
-    document.getElementById('checkoutModal').classList.remove('show');
-    document.body.style.overflow = 'auto';
+    // Redireciona direto para WhatsApp
+    redirectWhatsApp(planName, price);
 }
 
 // ============================================
