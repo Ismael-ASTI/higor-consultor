@@ -112,8 +112,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function redirectWhatsApp(planName, price) {
     // Número do WhatsApp (com código de país: 55 = Brasil)
-    // SUBSTITUA AQUI COM SEU NÚMERO: Ex: 5511987654321 (55 + DDD + número)
-    const whatsappNumber = '5511999999999';
+    // Número oficial do WhatsApp (55 + DDD + número)
+    const whatsappNumber = '556285708074';
     
     // Mensagem padrão
     const message = `Olá! Tenho interesse no plano *${planName}* (R$ ${price}). Gostaria de mais informações.`;

@@ -356,6 +356,28 @@ img {
     overflow: hidden;
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--gray-200);
+    position: relative;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.gallery-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15, 20, 25, 0) 55%, rgba(15, 20, 25, 0.35) 100%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+}
+
+.gallery-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-2xl);
+    border-color: rgba(0, 188, 212, 0.6);
+}
+
+.gallery-card:hover::after {
+    opacity: 1;
 }
 
 .gallery-card img {
@@ -364,6 +386,11 @@ img {
     display: block;
     aspect-ratio: 4 / 3;
     object-fit: cover;
+    transition: transform 0.45s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.04);
 }
 
 .hero-badge {
